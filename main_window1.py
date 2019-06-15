@@ -1,7 +1,6 @@
 import tkinter
 from painter1 import painterpg
 from painter2 import painterpg2
-from tkinter import messagebox
 
 def painter_main():
     main_window = tkinter.Tk()
@@ -18,21 +17,18 @@ def painter_main():
         painterpg2()
 
     def close_painter():
-        question_box = tkinter.messagebox.askquestion(title = '종료', message = '종료 하시겠습니까?')
-        if question_box == 'yes':
-            main_window.destroy()
-        else:
-            pass
+        main_window.destroy()
 
     button1 = tkinter.Button(main_window, text = '그림판 실행', command = start_painter,
                              anchor = "center", width = 10, height = 1)
-    button1.place(x = 65, y = 20)
-    button2 = tkinter.Button(main_window, text='그림판 백업', command=start_painter2,
-                             anchor="center", width=10, height=1)
-    button2.place(x=65, y=90)
+    button2 = tkinter.Button(main_window, text = '그림판 백업', command = start_painter2,
+                             anchor = "center", width = 10, height = 1)
     button3 = tkinter.Button(main_window, text = '종료', command = close_painter,
                              anchor = "center", width = 10, height = 1)
-    button3.place(x = 65, y = 160)
+
+    button1.place(x=65, y=20)
+    button2.place(x=65, y=90)
+    button3.place(x=65, y=160)
 
     main_window.mainloop()
 
