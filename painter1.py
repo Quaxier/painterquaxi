@@ -52,26 +52,26 @@ def painterpg():
         global color
         color = '#f0f0f0'
 
-    canvas = Canvas(painter, width=600, height=600)
+    canvas = Canvas(painter, width=400, height=400, relief = "solid", bd = 3)
+    canvas.pack(side = "top")
     canvas.bind('<B1-Motion>', paint)
-    canvas.pack()
 
     b1 = Button(painter, bg='red', width=3, height=1, command=change_red)
     b2 = Button(painter, bg='blue', width=3, height=1, command=change_blue)
     b3 = Button(painter, bg='green', width=3, height=1, command=change_green)
     b4 = Button(painter, text='UP', font='Arial', width=6, height=1, command=increase_p)
     b5 = Button(painter, text='DOWN', font='Arial', width=6, height=1, command=decrease_p)
-    b6 = Button(painter, text='CLEAR', font='Arial', width=6, height=1, command=clear)
+    b6 = Button(painter, text='전체 지우기', font='Arial', width=8, height=1, command=clear)
     b7 = Button(painter, text='지우개', font='Arial', width=6, height=1, command=erase)
     b8 = Button(painter, bg='black', width=3, height=1, command=change_black)
 
-    b1.place(x=0, y=0)
-    b2.place(x=0, y=25)
-    b3.place(x=0, y=50)
-    b4.place(x=32, y=0)
-    b5.place(x=32, y=35)
-    b6.place(x=110, y=0)
-    b7.place(x=110, y=35)
-    b8.place(x=0, y=75)
+    b1.place(x=0, y=575)
+    b2.place(x=30, y=575)
+    b3.place(x=60, y=575)
+    b4.place(x=20, y=0)
+    b5.place(x=20, y=35)
+    b6.place(x=515, y=5)
+    b7.place(x=0, y=530)
+    b8.place(x=90, y=575)
 
     painter.mainloop()
