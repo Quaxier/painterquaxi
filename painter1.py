@@ -15,7 +15,7 @@ def painterpg():
         lastx1, lasty1 = event.x, event.y
         x1, y1 = (event.x - p), (event.y - p)
         x2, y2 = (event.x + p), (event.y + p)
-        canvas.create_oval(x1, y1, x2, y2, fill=color, outline=color)
+        canvas.create_line(x1, y1, x2, y2, fill = color, width = p)
 
     def change_black():
         global color
