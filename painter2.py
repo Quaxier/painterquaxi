@@ -1,6 +1,5 @@
 import tkinter
 
-# 상수
 color = 'black'
 p = 1
 lastx1, lasty1 = 0, 0
