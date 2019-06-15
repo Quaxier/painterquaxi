@@ -8,10 +8,6 @@ def painter_main():
     main_window.geometry("200x200+100+100")
     main_window.resizable(False, False)
 
-    def start_painter():
-        main_window.destroy()
-        painterpg()
-
     def start_painter2():
         main_window.destroy()
         painterpg2()
@@ -19,16 +15,13 @@ def painter_main():
     def close_painter():
         main_window.destroy()
 
-    button1 = tkinter.Button(main_window, text = '그림판 실행', command = start_painter,
+    button1 = tkinter.Button(main_window, text = '그림판 실행', command = start_painter2,
                              anchor = "center", width = 10, height = 1)
-    button2 = tkinter.Button(main_window, text = '그림판 백업', command = start_painter2,
-                             anchor = "center", width = 10, height = 1)
-    button3 = tkinter.Button(main_window, text = '종료', command = close_painter,
+    button2 = tkinter.Button(main_window, text = '종료', command = close_painter,
                              anchor = "center", width = 10, height = 1)
 
-    button1.place(x=65, y=20)
-    button2.place(x=65, y=90)
-    button3.place(x=65, y=160)
+    button1.place(x=65, y=60)
+    button2.place(x=65, y=120)
 
     main_window.mainloop()
 
